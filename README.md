@@ -1,4 +1,4 @@
-BDD Demo
+WS Demo
 ========================
 
 
@@ -32,30 +32,45 @@ Here is a sample Apache config:
     </Directory>
   </VirtualHost>
 
-== The API
+The API
+-------------
 
-=== Create a Widget
---------------------------------
+JSON:
+
+{"widget": {
+    "name": "A name of a widget",
+    "customers": [
+        {
+            "id": "50ab0860cf5dac7c1a000000",
+            "name": "A customer name"
+        }
+
+}}
+
+Create a Widget
+-------------
 /widgets
 POST
 Accept: application/json
 Content-Type: application/json
 
 
-=== List of Widgets
---------------------------------
+List of Widgets
+-------------
 /widgets
 GET
 Accept: application/json
 Content-Type: application/json
 
-=== Update a Widget
+Update a Widget
+-------------
 /widgets/{id}
 PUT
 Accept: application/json
 Content-Type: application/json
 
-=== Show a Widget
+Show a Widget
+-------------
 /widgets/{id}
 GET
 Accept: application/json
