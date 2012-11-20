@@ -17,21 +17,21 @@ WS Demo
 Here is a sample Apache config:
 
 <pre>
-  <VirtualHost *:80>
-    ServerName ws
-    DocumentRoot "/var/www/html/widget_service/web"
-    DirectoryIndex app.php
-    <Directory /var/www/html/widget_service/web">
-      Options +Indexes FollowSymLinks +ExecCGI
-      AllowOverride All
-      Allow from All
-      <IfModule mod_rewrite.c>
-          RewriteEngine On
-          RewriteCond %{REQUEST_FILENAME} !-f
-          RewriteRule ^(.*)$ app.php [QSA,L]
-      </IfModule>
-    </Directory>
-  </VirtualHost>
+    &lt;VirtualHost *:80&gt;
+      ServerName ws
+      DocumentRoot &quot;/var/www/html/widget_service/web&quot;
+      DirectoryIndex app.php
+      &lt;Directory /var/www/html/widget_service/web&quot;&gt;
+        Options +Indexes FollowSymLinks +ExecCGI
+        AllowOverride All
+        Allow from All
+        &lt;IfModule mod_rewrite.c&gt;
+            RewriteEngine On
+            RewriteCond %{REQUEST_FILENAME} !-f
+            RewriteRule ^(.*)$ app.php [QSA,L]
+        &lt;/IfModule&gt;
+      &lt;/Directory&gt;
+    &lt;/VirtualHost&gt;
 </pre>
 
 The API
