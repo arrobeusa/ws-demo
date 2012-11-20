@@ -1,0 +1,31 @@
+widgets:
+    pattern:  /
+    defaults: { _controller: "AcmeDemoBundle:Widgets:list", _format:~ }
+    requirements: { _method: GET, _format:html|json }
+
+widget_create:
+    pattern:  /
+    defaults: { _controller: "AcmeDemoBundle:Widgets:create", _format:~ }
+    requirements: { _method: POST, _format:json|html }
+
+widget_update:
+    pattern: /{id}
+    defaults: { _controller: "AcmeDemoBundle:Widgets:update", _format:~ }
+    requirements: { _method: PUT, _format:json|html }
+
+widget_edit:
+    pattern: /{id}/edit
+    defaults: { _controller: "AcmeDemoBundle:Widgets:edit", _format:~ }
+    requirements: { _method: GET, _format: html }  
+
+widget_new:
+    pattern: /new
+    defaults: { _controller: "AcmeDemoBundle:Widgets:new", _format:~ }
+    requirements: { _method: GET, _format: html }
+
+widget:
+    pattern: /{id}
+    defaults: { _controller: "AcmeDemoBundle:Widgets:show", _format:~ }
+    requirements: { _method: GET, _format: json|html }
+    
+  
